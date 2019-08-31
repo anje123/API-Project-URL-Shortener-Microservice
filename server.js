@@ -32,7 +32,7 @@ const Schema = new mongoose.Schema({
     type: Number,
     default: 0
   }
-});
+},{ versionKey: false });
 const Url = mongoose.model("Url",Schema);
 
 app.use('/public', express.static(process.cwd() + '/public'));
